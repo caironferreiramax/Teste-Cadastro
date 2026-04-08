@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h2>Novo Produto</h2>
+    <form id="formProduto">
+      <label>Nome do Produto:</label>
+      <input type="text" id="nome" placeholder="Nome do Produto" required />
+      <label>Preço do Produto:</label>
+      <input
+        type="number"
+        id="preco"
+        step="0.01"
+        placeholder="Preço (Ex: 25.90)"
+        required
+      />
+      <label>Estoque do Produto: </label>
+      <input
+        type="number"
+        id="estoque"
+        placeholder="Quantidade em Estoque"
+        required
+      />
+      <button id="btnSalvar" type="submit">Cadastrar Produto</button>
+      <button
+        type="button"
+        id="btnCancelar"
+        style="display: none; background-color: red; color: white"
+      >
+        Cancelar
+      </button>
+    </form>
+    <p id="mensagemProduto"></p>
+
+    <h3>Produtos</h3>
+    <table border="1" id="tabelaProdutos">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Estoque</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <hr />
+    <section id="sessaoPedidos">
+      <h2>Novo Pedido</h2>
+      <form id="formPedido">
+        <label>Cliente:</label>
+        <select id="selectCliente" required>
+          <option value="">Selecione um cliente...</option>
+        </select>
+
+        <label>Plano:</label>
+        <select id="selectProduto" required>
+          <option value="">Selecione um Plano...</option>
+        </select>
+
+        <label>Quantidade:</label>
+        <input type="number" id="quantidade" value="1" min="1" required />
+
+        <label>Valor Total (R$):</label>
+        <input type="number" id="valorTotal" step="0.01" readonly required />
+
+        <label>Status do Pedido:</label>
+        <select id="selectStatus" required>
+          <option value="Pendente">Pendente</option>
+          <option value="Pago">Pago</option>
+          <option value="Enviado">Enviado</option>
+          <option value="Cancelado">Cancelado</option>
+        </select>
+
+        <button type="submit" id="btnFinalizar">Finalizar Pedido</button>
+        <button
+          type="button"
+          id="btnCancelarPedido"
+          style="display: none; background-color: red; color: white"
+        >
+          Cancelar
+        </button>
+      </form>
+      <p id="mensagemPedido"></p>
+    </section>
+
+    <h3>Pedidos</h3>
+    <table border="1" id="tabelaPedidos">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Cliente</th>
+          <th>Produto</th>
+          <th>Total (R$)</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <hr />
+    <section id="sessaoClientes">
+      <h2>Novo Cliente</h2>
+      <form id="formCliente">
+        <label>Nome Completo:</label>
+        <input type="text" id="cliNome" placeholder="Nome Completo" required />
+        <label>E-mail:</label>
+        <input type="email" id="cliEmail" placeholder="E-mail" required />
+        <label>Usuário:</label>
+        <input type="text" id="cliUser" placeholder="Usuário" required />
+        <label>Senha:</label>
+        <input type="password" id="cliPass" placeholder="Senha" required />
+        <label>Data de Nascimento:</label>
+        <input type="date" id="cliDataNasc" required />
+        <label>Contato:</label>
+        <input
+          type="tel"
+          id="cliTelefone"
+          placeholder="Telefone (Ex: 11999999999)"
+        />
+        <button type="submit" id="btnSalvarCliente">Salvar Cliente</button>
+        <button
+          type="button"
+          id="btnCancelarCliente"
+          style="display: none; background-color: red; color: white"
+        >
+          Cancelar
+        </button>
+      </form>
+      <p id="mensagemCliente"></p>
+
+      <h3>Clientes</h3>
+      <table border="1" id="tabelaClientes">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Aniversário</th>
+            <th>Contato</th>
+            <th>Usuário</th>
+            <th>Senha</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <hr />
+  </body>
+</html>
