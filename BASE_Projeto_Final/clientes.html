@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes - Arca do Bicho</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-brand">
+          <h1>Arca do Bicho</h1>
+          <p>Produtos para pets com carinho e sabor brasileiro</p>
+        </div>
+        <nav class="main-nav">
+          <a href="Index.html">Home</a>
+          <a href="produtos.html">Produtos</a>
+          <a href="pedidos.html">Pedidos</a>
+          <a href="clientes.html">Clientes</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>Novo Cliente</h2>
+      <form id="formCliente">
+        <label>Nome Completo:</label>
+        <input type="text" id="cliNome" placeholder="Nome Completo" required />
+        <label>E-mail:</label>
+        <input type="email" id="cliEmail" placeholder="E-mail" required />
+        <label>Usuário:</label>
+        <input type="text" id="cliUser" placeholder="Usuário" required />
+        <label>Senha:</label>
+        <input type="password" id="cliPass" placeholder="Senha" required />
+        <label>Data de Nascimento:</label>
+        <input type="date" id="cliDataNasc" required />
+        <label>Contato:</label>
+        <input
+          type="tel"
+          id="cliTelefone"
+          placeholder="Telefone (Ex: 11999999999)"
+        />
+        <button type="submit" id="btnSalvarCliente">Salvar Cliente</button>
+        <button
+          type="button"
+          id="btnCancelarCliente"
+          style="display: none; background-color: red; color: white"
+        >
+          Cancelar
+        </button>
+      </form>
+      <p id="mensagemCliente"></p>
+
+      <h3>Clientes</h3>
+      <table border="1" id="tabelaClientes">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Aniversário</th>
+            <th>Contato</th>
+            <th>Usuário</th>
+            <th>Senha</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+  </body>
+</html>

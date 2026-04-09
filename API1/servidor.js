@@ -2,7 +2,7 @@ import express from "express";
 import { createConnection } from "mysql2";
 import cors from "cors";
 const app = express();
-const port = 3000;
+const port = 3006;
 
 app.use(cors());
 app.use(express.json()); 
